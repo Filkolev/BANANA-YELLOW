@@ -1,5 +1,4 @@
 Obligatory game features:
- - Drawing the hangman
  - Saving a go-to simplistic working version to use if we fail to implement GUI
  - Put comments to source code
  - Refactor code if possible
