@@ -20,7 +20,7 @@ public class Hangman {
 		while (secretWords.size() > 0) {
 			
 			int index = selector.nextInt(secretWords.size());
-			int livesLeft = 5;
+			int livesLeft = 10;
 
 			String currentWord = secretWords.get(index);
 			secretWords.remove(index);
@@ -38,7 +38,7 @@ public class Hangman {
 			System.out.println("1. Enter letters from the English alphabet in order to guess the word!");
 			System.out.println("2. If you enter more than one letter, only the first one will matter.");
 			System.out.println("3. Entering symbols or digits may get you killed!");
-			System.out.println("4. You can make 5 wrong guesses, on the 6th you DIE!");
+			System.out.println("4. You can make 9 wrong guesses, on the 10th you DIE!");
 			System.out.println("\nReady? Press enter.");
 			
 			input.nextLine();
@@ -63,11 +63,10 @@ public class Hangman {
 				}
 
 				if (!letterFound) {
-					livesLeft--;
-					PrintHanging.PrintMan(livesLeft);
 					System.out.println("Sorry! This letter isn't in the word!");
 					System.out.println("Press enter to continue.");
-					input.nextLine();						
+					input.nextLine();
+					livesLeft--;						
 				}
 				else {
 					System.out.println("Good guess! Keep going!");
@@ -106,7 +105,18 @@ public class Hangman {
 		  {
 		     System.out.println("\b") ;
 		  }
-
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println("  __________");
+		System.out.println(" |          |");
+		System.out.println(" |          |");
+		System.out.println(" |          |");
+		System.out.println(" |          |");
+		System.out.println(" |          |");
+		
+		
 		System.out.printf("%n%n%s%n", new String(guessed));
 		System.out.print("Your guess: ");
 	}
