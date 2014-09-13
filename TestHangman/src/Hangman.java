@@ -101,6 +101,10 @@ public class Hangman {
 	
 	public static void RefreshWindow(Integer l, char[] guessed) {
 		// Clear console
+		for(int clear = 0; clear < 1000; clear++)
+		  {
+		     System.out.println("\b") ;
+		  }
 		System.out.println();
 		System.out.println();
 		System.out.println();
