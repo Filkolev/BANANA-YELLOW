@@ -1,6 +1,0 @@
-1. Text box to hold the word to be guessed.
-2. Drawing the hangman.
-3. Creating different lists of words (difficulty level).
-4. Keep guesses on screen.
-5. Tell user if a letter was already tried.
-6. Game Over message.
