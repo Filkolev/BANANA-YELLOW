@@ -1,0 +1,24 @@
+Obligatory game features:
+ - Drawing the hangman
+ - Saving a go-to simplistic working version to use if we fail to implement GUI
+ - Put comments to source code
+
+Optional game features:
+ - Create REAL GUI
+ - Text box to hold the word to be guessed
+ - Creating different lists of words - different categories; user chooses a category on game start
+ - Reading words from a text file - store them in a list in order to be able to remove them
+ - Keep guesses on screen - use an array and print it
+ - Tell user if a letter was already tried
+
+Presentation materials:
+ - Add each member's contribution in a text file
+ - Each member should commit to the repository
+ - Make a simple pptx (perhaps add contributions there)
+ - Source code!!!
+
+During presentation:
+ - One member plays the game while another presents his part
+ - Maybe choose 2 people to present - 10 minutes, 6 members (not enough time for all of us to present)
+
+ 
