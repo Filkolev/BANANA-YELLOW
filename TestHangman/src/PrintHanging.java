@@ -105,8 +105,8 @@ public class PrintHanging {
 			System.out.println("|    |            |");
 			System.out.println("|    |            |");
 			System.out.println("|    |          *****");
-			System.out.println("|    |         ***  ***");
-			System.out.println("|    |         ***  ***");
+			System.out.println("|    |        ***   ***");
+			System.out.println("|    |        ***   ***");
 			System.out.println("|    |          *****");
 			System.out.println("|    |         //|||\\\\");
 			System.out.println("|    |        // ||| \\\\");
@@ -129,8 +129,8 @@ public class PrintHanging {
 			System.out.println("|    |            |");
 			System.out.println("|    |            |");
 			System.out.println("|    |          *****");
-			System.out.println("|    |         ***  ***");
-			System.out.println("|    |         ***  ***");
+			System.out.println("|    |        ***   ***");
+			System.out.println("|    |        ***   ***");
 			System.out.println("|    |          *****");
 			System.out.println("|    |         //|||\\");
 			System.out.println("|    |        // ||| \\");
@@ -153,8 +153,8 @@ public class PrintHanging {
 			System.out.println("|    |            |");
 			System.out.println("|    |            |");
 			System.out.println("|    |          *****");
-			System.out.println("|    |         ***  ***");
-			System.out.println("|    |         ***  ***");
+			System.out.println("|    |        ***   ***");
+			System.out.println("|    |        ***   ***");
 			System.out.println("|    |          *****");
 			System.out.println("|    |         //|||\\\\");
 			System.out.println("|    |        // ||| \\\\");
