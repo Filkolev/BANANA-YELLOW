@@ -4,7 +4,16 @@ public class PrintHanging {
 	}
 	
 	public static void PrintMan(int livesLeft){
-		if (livesLeft == 4) {
+		if (livesLeft == 6) {
+			System.out.println("_____");
+			System.out.println("|   |");
+			System.out.println("|    ");
+			System.out.println("|    ");
+			System.out.println("|    ");
+			System.out.println("|    ");
+			System.out.println();
+		}
+		if (livesLeft == 5) {
 			System.out.println("_____");
 			System.out.println("|   |");
 			System.out.println("|   O");
@@ -14,7 +23,7 @@ public class PrintHanging {
 			System.out.println();
 		}
 		
-		if (livesLeft == 3) {
+		if (livesLeft == 4) {
 			System.out.println("_____");
 			System.out.println("|   |");
 			System.out.println("|   O");
@@ -24,7 +33,7 @@ public class PrintHanging {
 			System.out.println();
 		}
 		
-		if (livesLeft == 2) {
+		if (livesLeft == 3) {
 			System.out.println("_____");
 			System.out.println("|   |");
 			System.out.println("|   O");
@@ -34,7 +43,7 @@ public class PrintHanging {
 			System.out.println();
 		}
 		
-		if (livesLeft == 1) {
+		if (livesLeft == 2) {
 			System.out.println("_____");
 			System.out.println("|   |");
 			System.out.println("|   O");
@@ -44,7 +53,7 @@ public class PrintHanging {
 			System.out.println();
 		}
 		
-		if (livesLeft == 0) {
+		if (livesLeft == 1) {
 		   System.out.println("_____");
 		   System.out.println("|   |");
 		   System.out.println("|   o");
@@ -54,7 +63,7 @@ public class PrintHanging {
 		   System.out.println();
 		}
 		
-		if (livesLeft < 0) {
+		if (livesLeft < 1) {
 		   System.out.println("_____");
 		   System.out.println("|   |");
 		   System.out.println("|   o");
