@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Hangman {
-	public static int livesLeft = 6;
+	public static int livesLeft;
 	public static boolean letterFound = false;				
 	public static int counterEntries = 0;
 
@@ -34,6 +34,8 @@ public class Hangman {
 			for (int i = 0; i < guessed.length; i++) {
 				guessed[i] = '*';
 			}
+			
+			livesLeft = 6;
 			
 			System.out.println("RULES:");
 			System.out.println("1. Enter letters from the English alphabet in order to guess the word!");
@@ -103,7 +105,7 @@ public class Hangman {
 	
 	public static void RefreshWindow(Integer l, char[] guessed) {
 		// Clear console
-		for(int clear = 0; clear < 10; clear++){
+		for(int clear = 0; clear < 50; clear++){
 		     System.out.println("\b") ;
 		} 
 		
