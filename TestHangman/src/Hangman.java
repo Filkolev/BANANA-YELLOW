@@ -64,7 +64,9 @@ public class Hangman {
 						totalLettersFound++;						
 					}			
 				}
-
+				// Clear console method
+				clearConsole(); 
+				
 				if (counterEntries != 0) {
 					if (!letterFound) {
 						livesLeft--;
@@ -114,19 +116,14 @@ public class Hangman {
 	}
 	
 	public static void RefreshWindow(Integer l, char[] guessed) {
-		// Clear console
-		clearConsole(); 
 		
 		PrintHanging.PrintMan(livesLeft);
-
 
 		System.out.println("You have " + livesLeft + " lives left!");
 
 		System.out.printf("%n%n%s%n", new String(guessed));
 		
-
 	}
-
 
 	private static void clearConsole() {
 		for(int clear = 0; clear < 50; clear++){
@@ -134,5 +131,3 @@ public class Hangman {
 		}
 	}
 }
-
-
