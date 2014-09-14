@@ -7,6 +7,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Hangman {
+	public static int livesLeft = 6;
+	public static boolean letterFound = false;				
+
+
 	public static void main(String[] args) {
 		// Add difficulty levels - three separate lists of words; user will choose after each game;
 		List<String> secretWords = new LinkedList<String>(Arrays.asList("PURIFICATION", "SUBROUTINE", "ELEPHANT", "EPITOME"));
@@ -20,7 +24,6 @@ public class Hangman {
 		while (secretWords.size() > 0) {
 			
 			int index = selector.nextInt(secretWords.size());
-			int livesLeft = 5;
 
 			String currentWord = secretWords.get(index);
 			secretWords.remove(index);
@@ -38,7 +41,7 @@ public class Hangman {
 			System.out.println("1. Enter letters from the English alphabet in order to guess the word!");
 			System.out.println("2. If you enter more than one letter, only the first one will matter.");
 			System.out.println("3. Entering symbols or digits may get you killed!");
-			System.out.println("4. You can make 5 wrong guesses, on the 6th you DIE!");
+			System.out.println("4. You can make 6 wrong guesses, on the 6th you DIE!");
 			System.out.println("\nReady? Press enter.");
 			
 			input.nextLine();
@@ -52,7 +55,6 @@ public class Hangman {
 				RefreshWindow(livesLeft, guessed);
 				String userEntry = input.nextLine();
 				char guessLetter = userEntry.toUpperCase().charAt(0);
-				boolean letterFound = false;				
 
 				for (int i = 0; i < guessed.length; i++) {
 					if (guessLetter == toGuess[i]) {
@@ -62,19 +64,7 @@ public class Hangman {
 					}			
 				}
 
-				if (!letterFound) {
-					livesLeft--;
-					PrintHanging.PrintMan(livesLeft);
-					System.out.println("Sorry! This letter isn't in the word!");
-					System.out.println("Press enter to continue.");
-					input.nextLine();						
-				}
-				else {
-					System.out.println("Good guess! Keep going!");
-					System.out.println("Press enter to continue.");
-					input.nextLine();
-				}
-
+				
 				if (livesLeft < 0) {
 					dead = true;
 					System.out.println("Sometimes win, sometimes lyun!");
@@ -106,8 +96,21 @@ public class Hangman {
 		  {
 		     System.out.println("\b") ;
 		  }
+		if (!letterFound) {
+			livesLeft--;
+			System.out.println("Sorry! This letter isn't in the word!");
+							
+		} else {
+			System.out.println("Good guess! Keep going!");
+			letterFound = false;
+		
+		}
+
+		PrintHanging.PrintMan(livesLeft);
+		
 
 		System.out.printf("%n%n%s%n", new String(guessed));
+		
 		System.out.print("Your guess: ");
 	}
 }
