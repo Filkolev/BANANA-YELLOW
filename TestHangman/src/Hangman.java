@@ -75,6 +75,7 @@ public class Hangman {
 						System.out.println("Sorry! This letter isn't in the word!");
 						System.out.println("Entered letters: " + entries);
 					} else if (letterFound) {
+						// check for duplicates
 						if (entries.contains(userEntry)){
 							System.out.println("This letter is already entered");
 							System.out.println("Entered letters: " + entries);
