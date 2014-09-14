@@ -56,7 +56,7 @@ public class PrintHanging {
 		if (livesLeft == 1) {
 		   System.out.println("_____");
 		   System.out.println("|   |");
-		   System.out.println("|   o");
+		   System.out.println("|   O");
 		   System.out.println("|  /|\\ ");
 		   System.out.println("|    \\");
 		   System.out.println("|    ");
@@ -66,7 +66,7 @@ public class PrintHanging {
 		if (livesLeft < 1) {
 		   System.out.println("_____");
 		   System.out.println("|   |");
-		   System.out.println("|   o");
+		   System.out.println("|   O");
 		   System.out.println("|  /|\\ ");
 		   System.out.println("|  / \\");
 		   System.out.println("|    ");
