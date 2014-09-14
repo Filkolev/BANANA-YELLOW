@@ -116,6 +116,7 @@ public class Game {
 			}
 
 			VisualControls.endGame();
+			input.nextLine();
 			break;
 		}		
 	}

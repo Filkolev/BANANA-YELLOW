@@ -50,8 +50,11 @@ public class VisualControls {
 	}
 	
 	public static void endGame() {
+		clearConsole();
 		System.out.println("Sorry, there are no more words left!");
 		System.out.println("You can purchase more words for the DISCOUNTED price of JUST $0.99! Call your local representative now!");
+		System.out.println();		
+		System.out.println("Press any key to exit...");
 	}
 	
 	public static void printVictory() {
