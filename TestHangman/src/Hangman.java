@@ -1,5 +1,3 @@
-// Version 0.02
-
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -92,22 +90,19 @@ public class Hangman {
 	
 	public static void RefreshWindow(Integer l, char[] guessed) {
 		// Clear console
-		for(int clear = 0; clear < 1000; clear++)
-		  {
+		for(int clear = 0; clear < 1000; clear++){
 		     System.out.println("\b") ;
-		  }
+		} 
 		if (!letterFound) {
 			livesLeft--;
 			System.out.println("Sorry! This letter isn't in the word!");
-							
 		} else {
 			System.out.println("Good guess! Keep going!");
 			letterFound = false;
-		
 		}
 
 		PrintHanging.PrintMan(livesLeft);
-		
+		System.out.println("You have more " + livesLeft + " lives!");
 
 		System.out.printf("%n%n%s%n", new String(guessed));
 		
