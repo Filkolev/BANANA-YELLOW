@@ -18,7 +18,7 @@ public class VisualControls {
 	}
 
 	public static void clearConsole() {
-		for(int clear = 0; clear < 50; clear++){
+		for(int clear = 0; clear < 150; clear++){
 			System.out.println("\b") ;
 		}
 	}
