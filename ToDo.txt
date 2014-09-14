@@ -2,14 +2,16 @@ Obligatory game features:
  - Saving a go-to simplistic working version to use if we fail to implement GUI
  - Put comments to source code
  - Refactor code if possible
+ - Create .exe file
 
 Optional game features:
  (done) - Creating different lists of words - different categories; user chooses a category on game start
- - Keep guesses on screen - use an array and print it
- - Tell user if a letter was already tried
+ (done) - Keep guesses on screen - use an array and print it
+ (done) - Tell user if a letter was already tried
  (done) - Keep Hangman always on the console screen;
  (done) - Replace PRESS ENTER TO CONTINUE command;
  (done) - Clearing the console;
+
  
 
 Presentation materials:
