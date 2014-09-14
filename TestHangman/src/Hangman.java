@@ -72,7 +72,8 @@ public class Hangman {
 					letterFound = false;
 				}
 				
-				if (livesLeft < 0) {
+				if (livesLeft < 1) {
+					RefreshWindow(livesLeft, guessed);
 					dead = true;
 					System.out.println("Sometimes win, sometimes lyun!");
 					System.out.println("The word was: " + currentWord);
@@ -82,7 +83,7 @@ public class Hangman {
 				}
 				else if (totalLettersFound == currentWord.length()) {
 					gameWon = true;
-					System.out.println("VIRTULATION!!!");
+					System.out.println(" YOU WIN !!!");
 					System.out.println("Press enter to play again.");
 					input.nextLine();
 					break;
