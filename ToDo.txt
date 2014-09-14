@@ -1,16 +1,18 @@
 Obligatory game features:
- - Saving a go-to simplistic working version to use if we fail to implement GUI
+ - (done)Saving a go-to simplistic working version to use if we fail to implement GUI
  - Put comments to source code
  - Refactor code if possible
  - Create .exe file
 
 Optional game features:
  (done) - Creating different lists of words - different categories; user chooses a category on game start
+ - Add selection of categories at game start
  (done) - Keep guesses on screen - use an array and print it
  (done) - Tell user if a letter was already tried
  (done) - Keep Hangman always on the console screen;
  (done) - Replace PRESS ENTER TO CONTINUE command;
  (done) - Clearing the console;
+ - set console title (console dimensions cannot be controlled using Java);
 
  
 
@@ -18,6 +20,7 @@ Presentation materials:
  (done) - Add each member's contribution in a text file
  (done) - Each member should commit to the repository
  (done) - Make a simple pptx (perhaps add contributions there)
+ - Add statistics to presentation - lines of code written, amount of time spent coding and debugging (3-4 hours of coding, 12+ hours of debugging)
  - Source code!!!
 
 During presentation:
