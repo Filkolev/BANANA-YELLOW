@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -8,6 +9,7 @@ public class Hangman {
 	public static int livesLeft;
 	public static boolean letterFound = false;				
 	public static int counterEntries = 0;
+	public static LinkedHashSet<String> entries = new LinkedHashSet<String>();
 
 
 	public static void main(String[] args) {
@@ -71,12 +73,22 @@ public class Hangman {
 					if (!letterFound) {
 						livesLeft--;
 						System.out.println("Sorry! This letter isn't in the word!");
+						System.out.println("Entered letters: " + entries);
 					} else if (letterFound) {
-						System.out.println("Good guess! Keep going!");
-						letterFound = false;
+						if (entries.contains(userEntry)){
+							System.out.println("This letter is already entered");
+							System.out.println("Entered letters: " + entries);
+							}
+						
+						else{
+							System.out.println("Good guess! Keep going!");
+							System.out.println("Entered letters: " + entries);
+							letterFound = false;
+						}
 					}
+					entries.add(userEntry);
 				}
-				
+
 				int starsLeft = 0; 
 				
 				if (livesLeft < 1) {
