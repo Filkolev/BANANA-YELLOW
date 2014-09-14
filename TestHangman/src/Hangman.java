@@ -116,7 +116,7 @@ public class Hangman {
 		
 
 	}
-<<<<<<< HEAD
+
 
 	private static void clearConsole() {
 		for(int clear = 0; clear < 50; clear++){
@@ -124,6 +124,6 @@ public class Hangman {
 		}
 	}
 }
-=======
-}
->>>>>>> origin/master
+
+
+
