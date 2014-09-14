@@ -73,7 +73,9 @@ public class Hangman {
 						System.out.println("Good guess! Keep going!");
 						letterFound = false;
 					}
-				}	
+				}
+				
+				int starsLeft = 0; 
 				
 				if (livesLeft < 1) {
 					RefreshWindow(livesLeft, guessed);
@@ -84,7 +86,14 @@ public class Hangman {
 					input.nextLine();
 					break;
 				}
-				else if (totalLettersFound == currentWord.length()) {
+				else
+					// count the stars
+					for (int i = 0; i < guessed.length; i++) {			
+						 char letter = guessed[i];
+						 if (letter=='*')
+							 starsLeft++;
+					}
+						 if (starsLeft == 0){
 					gameWon = true;
 					for(int clear = 0; clear < 1000; clear++){
 					     System.out.println("\b") ;
@@ -93,6 +102,7 @@ public class Hangman {
 					System.out.println("Press enter to play again.");
 					input.nextLine();
 					break;
+						 
 				}
 			}
 			
@@ -110,7 +120,7 @@ public class Hangman {
 		PrintHanging.PrintMan(livesLeft);
 
 
-		System.out.println("You have more " + livesLeft + " lives!");
+		System.out.println("You have " + livesLeft + " lives left!");
 
 		System.out.printf("%n%n%s%n", new String(guessed));
 		
@@ -124,6 +134,5 @@ public class Hangman {
 		}
 	}
 }
-
 
 
