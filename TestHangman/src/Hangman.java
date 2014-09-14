@@ -1,5 +1,3 @@
-// Version 0.02
-
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -46,8 +44,6 @@ public class Hangman {
 			
 			input.nextLine();
 			
-			
-			
 			// to fix - count repeated letters in the word, don't count letters that were already guessed before
 			int totalLettersFound = 0;
 			
@@ -83,13 +79,15 @@ public class Hangman {
 				}
 				else if (totalLettersFound == currentWord.length()) {
 					gameWon = true;
-					System.out.println(" YOU WIN !!!");
+					for(int clear = 0; clear < 1000; clear++){
+					     System.out.println("\b") ;
+					} 
+					System.out.println("YOU WIN !!!");
 					System.out.println("Press enter to play again.");
 					input.nextLine();
 					break;
 				}
 			}
-			
 			
 		}
 		
