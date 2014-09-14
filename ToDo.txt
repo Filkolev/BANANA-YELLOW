@@ -10,6 +10,10 @@ Optional game features:
  - Reading words from a text file - store them in a list in order to be able to remove them
  - Keep guesses on screen - use an array and print it
  - Tell user if a letter was already tried
+ - Keep Hangman always on the console screen;
+ - Replace PRESS ENTER TO CONTINUE command with goto;
+ - Clearing the console;
+ 
 
 Presentation materials:
  - Add each member's contribution in a text file
