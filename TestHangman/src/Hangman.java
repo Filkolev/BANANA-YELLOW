@@ -36,7 +36,7 @@ public class Hangman {
 			}
 			
 			livesLeft = 6;
-			
+			clearConsole(); 
 			System.out.println("RULES:");
 			System.out.println("1. Enter letters from the English alphabet in order to guess the word!");
 			System.out.println("2. If you enter more than one letter, only the first one will matter.");
@@ -105,9 +105,7 @@ public class Hangman {
 	
 	public static void RefreshWindow(Integer l, char[] guessed) {
 		// Clear console
-		for(int clear = 0; clear < 50; clear++){
-		     System.out.println("\b") ;
-		} 
+		clearConsole(); 
 		
 		PrintHanging.PrintMan(livesLeft);
 
@@ -117,5 +115,11 @@ public class Hangman {
 		System.out.printf("%n%n%s%n", new String(guessed));
 		
 
+	}
+
+	private static void clearConsole() {
+		for(int clear = 0; clear < 50; clear++){
+		     System.out.println("\b") ;
+		}
 	}
 }
