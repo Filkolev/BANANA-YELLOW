@@ -5,8 +5,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Hangman {
-	public static int livesLeft = 6;
+	public static int livesLeft = 5;
 	public static boolean letterFound = false;				
+	public static int counterEntries = 0;
 
 
 	public static void main(String[] args) {
@@ -18,7 +19,6 @@ public class Hangman {
 
 		boolean gameWon = false;
 		boolean dead = false;
-
 		while (secretWords.size() > 0) {
 			
 			int index = selector.nextInt(secretWords.size());
@@ -50,6 +50,8 @@ public class Hangman {
 			while (!dead || !gameWon) {
 				RefreshWindow(livesLeft, guessed);
 				String userEntry = input.nextLine();
+				counterEntries++;
+				
 				char guessLetter = userEntry.toUpperCase().charAt(0);
 
 				for (int i = 0; i < guessed.length; i++) {
@@ -60,13 +62,7 @@ public class Hangman {
 					}			
 				}
 				
-				if (!letterFound) {
-					livesLeft--;
-					System.out.println("Sorry! This letter isn't in the word!");
-				} else {
-					System.out.println("Good guess! Keep going!");
-					letterFound = false;
-				}
+				
 				
 				if (livesLeft < 1) {
 					RefreshWindow(livesLeft, guessed);
@@ -101,12 +97,20 @@ public class Hangman {
 		for(int clear = 0; clear < 1000; clear++){
 		     System.out.println("\b") ;
 		} 
-
+		
 		PrintHanging.PrintMan(livesLeft);
+		
+		if (!letterFound && counterEntries != 0) {
+			livesLeft--;
+			System.out.println("Sorry! This letter isn't in the word!");
+		} else if (letterFound && counterEntries != 0) {
+			System.out.println("Good guess! Keep going!");
+			letterFound = false;
+		}
+		
 		System.out.println("You have more " + livesLeft + " lives!");
 
 		System.out.printf("%n%n%s%n", new String(guessed));
-		
 		System.out.print("Your guess: ");
 	}
 }
