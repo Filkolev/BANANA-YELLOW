@@ -4,21 +4,18 @@ Obligatory game features:
  - Refactor code if possible
 
 Optional game features:
- - Create REAL GUI
- - Text box to hold the word to be guessed
- - Creating different lists of words - different categories; user chooses a category on game start
- - Reading words from a text file - store them in a list in order to be able to remove them
+ (done) - Creating different lists of words - different categories; user chooses a category on game start
  - Keep guesses on screen - use an array and print it
  - Tell user if a letter was already tried
- - Keep Hangman always on the console screen;
- - Replace PRESS ENTER TO CONTINUE command with goto;
- - Clearing the console;
+ (done) - Keep Hangman always on the console screen;
+ (done) - Replace PRESS ENTER TO CONTINUE command;
+ (done) - Clearing the console;
  
 
 Presentation materials:
- - Add each member's contribution in a text file
- - Each member should commit to the repository
- - Make a simple pptx (perhaps add contributions there)
+ (done) - Add each member's contribution in a text file
+ (done) - Each member should commit to the repository
+ (done) - Make a simple pptx (perhaps add contributions there)
  - Source code!!!
 
 During presentation:
