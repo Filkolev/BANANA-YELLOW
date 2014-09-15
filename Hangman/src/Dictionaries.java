@@ -32,7 +32,7 @@ public class Dictionaries {
 		case "fruitsAndVegetables":
 		case "4": secretWords = fruitsAndVegetables;	
 			break;
-		default:
+		default: secretWords = demo;
 			break;
 		}
 		return secretWords;
