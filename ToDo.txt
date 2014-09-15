@@ -6,13 +6,13 @@ Obligatory game features:
 
 Optional game features:
  (done) - Creating different lists of words - different categories; user chooses a category on game start
- - Add selection of categories at game start
+ (done) - Add selection of categories at game start
  (done) - Keep guesses on screen - use an array and print it
  (done) - Tell user if a letter was already tried
  (done) - Keep Hangman always on the console screen;
  (done) - Replace PRESS ENTER TO CONTINUE command;
  (done) - Clearing the console;
- - set console title (console dimensions cannot be controlled using Java);
+ (done) - set console title (console dimensions cannot be controlled using Java);
 
  
 
