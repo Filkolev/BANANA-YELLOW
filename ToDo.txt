@@ -1,8 +1,8 @@
 Obligatory game features:
  - (done)Saving a go-to simplistic working version to use if we fail to implement GUI
  - Put comments to source code
- - Refactor code if possible
- - Create .exe file
+ - (done) "Refactor" code if possible
+ - (done) Create .exe file
 
 Optional game features:
  (done) - Creating different lists of words - different categories; user chooses a category on game start
@@ -13,6 +13,8 @@ Optional game features:
  (done) - Replace PRESS ENTER TO CONTINUE command;
  (done) - Clearing the console;
  (done) - set console title (console dimensions cannot be controlled using Java);
+ (done) - console size set
+ - BUG - game closes when user presses Enter without entering a letter.
 
  
 
