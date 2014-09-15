@@ -23,6 +23,11 @@ public class VisualControls {
 		}
 	}
 	
+	public static void printCategorySelection(){
+		System.out.println("Choose a category (enter a number or the category name:)\n1. Demo\n2. Animals\n"
+				+ "3. Capitals\n4. Fruits and Vegitables\n");
+	}
+	
 	public static void printRules(){
 		System.out.println("RULES:");
 		System.out.println("1. Enter letters from the English alphabet in order to guess the word!");

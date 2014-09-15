@@ -20,16 +20,18 @@ public class Game {
 				entries.clear();
 			}
 			// Add user choices; boolean variable to see whether the user is still playing
-			secretWords = Dictionaries.demo;
-
 			Scanner input = new Scanner(System.in);
+			secretWords = Dictionaries.demo;
 
 			Random wordSelector = new Random();
 			boolean gameWon = false;
 			boolean dead = false;
 
 			while (secretWords.size() > 0) {
-
+				VisualControls.printCategorySelection(); //------------------->
+				String select = input.nextLine(); //--------------------------> Category choose
+				secretWords = Dictionaries.selection(select, secretWords); //->
+				
 				int index = wordSelector.nextInt(secretWords.size());
 				String currentWord = secretWords.get(index);
 				secretWords.remove(index);

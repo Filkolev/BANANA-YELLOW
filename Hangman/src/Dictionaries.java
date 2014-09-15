@@ -17,5 +17,24 @@ public class Dictionaries {
 	
 	public static List<String> fruitsAndVegetables = new LinkedList<String>(Arrays.asList(
 			"BANNANA", "APPLE", "ORANGE", "ONION", "POTATO", "CABBAGE", "PEAR", "STRAWBERRY"));
-		
+	
+	public static List<String> selection(String select, List<String> secretWords){
+		switch (String.valueOf(select.toLowerCase())) {
+		case "demo":
+		case "1": secretWords = demo;		
+			break;
+		case "animals":
+		case "2": secretWords = animals;	
+			break;
+		case "capitals":
+		case "3": secretWords = capitals;	
+			break;
+		case "fruitsAndVegetables":
+		case "4": secretWords = fruitsAndVegetables;	
+			break;
+		default:
+			break;
+		}
+		return secretWords;
+	}	
 }
