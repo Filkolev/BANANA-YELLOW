@@ -184,4 +184,26 @@ public class Drawings {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void printThankYou() throws IOException {
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader("ThankYou.txt"));
+			String line = reader.readLine();
+			
+			while (line != null) {
+				System.out.println(line);
+				line = reader.readLine();
+			}
+			
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			
+			reader.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

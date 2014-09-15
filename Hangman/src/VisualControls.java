@@ -24,7 +24,8 @@ public class VisualControls {
 	}
 	
 	public static void printCategorySelection(){
-		System.out.println("Choose a category (enter a number or the category name:)\n1. Demo\n2. Animals\n"
+		System.out.print("\nReady? ");		
+		System.out.println("Choose a category (enter a number or the category name):\n1. Demo\n2. Animals\n"
 				+ "3. Capitals\n4. Fruits and Vegitables\n");
 	}
 	
@@ -33,8 +34,8 @@ public class VisualControls {
 		System.out.println("1. Enter letters from the English alphabet in order to guess the word!");
 		System.out.println("2. If you enter more than one letter, only the first one will matter.");
 		System.out.println("3. Entering symbols or digits may get you killed!");
-		System.out.println("4. You can make 6 wrong guesses, on the 6th you DIE!");
-		System.out.print("\nReady? Press enter.");
+		System.out.println("4. You can make 6 wrong guesses, on the 6th you DIE!");		
+		System.out.println();
 	}
 	
 	private static void printGuessWord(char[] guessed){
@@ -56,8 +57,16 @@ public class VisualControls {
 	
 	public static void endGame() {
 		clearConsole();
-		System.out.println("Sorry, there are no more words left!");
-		System.out.println("You can purchase more words for the DISCOUNTED price of JUST $0.99! Call your local representative now!");
+
+		try {
+			Drawings.printThankYou();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println("THANK YOU FOR PLAYING!");
+		System.out.println("\nIf you ran out of words you can purchase more words for the DISCOUNTED price of JUST $0.99! Call your local representative now!");
 		System.out.println();		
 		System.out.println("Press any key to exit...");
 	}
@@ -88,5 +97,11 @@ public class VisualControls {
 	
 	private static void newGamePrompt(){
 		System.out.print("Would you like to play again? (Y - yes; default - close game): ");
+	}
+	
+	public static void initializeNewGame() {
+		VisualControls.clearConsole(); 
+		VisualControls.printRules();
+		VisualControls.printCategorySelection();		
 	}
 }

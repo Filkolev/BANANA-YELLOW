@@ -5,121 +5,131 @@ import java.util.Scanner;
 
 public class Game {
 
-	public static int livesLeft;
-	public static boolean letterFound = false;
-	public static boolean repeated;
-	public static char guessLetter;	
+	private static int livesLeft;
+	private static boolean letterFound = false;
+	private static boolean repeated;
+	private static char guessLetter;	
 	public static LinkedHashSet<String> entries = new LinkedHashSet<String>();
-	public static List<String> secretWords;
+	private static List<String> secretWords;
+	private static boolean playing;
 
-	@SuppressWarnings("resource")
-	public static void main(String[] args) {
-		while (true) {
-			
+	public static void main(String[] args) {		
+		Scanner input = new Scanner(System.in);
+		Random wordSelector = new Random();
+		playing = true;
+		boolean dead = false;
+		boolean gameWon = false;
+
+		while (playing) {			
 			if (!entries.isEmpty()) {
 				entries.clear();
 			}
-			// Add user choices; boolean variable to see whether the user is still playing
-			Scanner input = new Scanner(System.in);
-			secretWords = Dictionaries.demo;
-
-			Random wordSelector = new Random();
-			boolean gameWon = false;
-			boolean dead = false;
-
-			while (secretWords.size() > 0) {
-				VisualControls.printCategorySelection(); //------------------->
-				String select = input.nextLine(); //--------------------------> Category choose
-				secretWords = Dictionaries.selection(select, secretWords); //->
-				
-				int index = wordSelector.nextInt(secretWords.size());
-				String currentWord = secretWords.get(index);
-				secretWords.remove(index);
-
+			
+			VisualControls.initializeNewGame();
+			String category = input.nextLine();
+			secretWords = Dictionaries.selection(category, secretWords);
+			
+			while (secretWords.size() > 0) {	
+				String currentWord = pickWord(wordSelector);
 				char[] toGuess = currentWord.toCharArray();
 				char[] guessed = new char[currentWord.length()];
 				
-				if (!entries.isEmpty()) {
-					entries.clear();
-				}
-
-				for (int i = 0; i < guessed.length; i++) {
-					guessed[i] = '*';
-				}
-
-				livesLeft = 6;	
-				VisualControls.clearConsole(); 
-				VisualControls.printRules();
-				input.nextLine();	
+				initializeGuessedWord(guessed);									
 
 				VisualControls.refreshWindow(livesLeft, guessed, repeated, guessLetter, letterFound, false);
 
 				while (!dead && !gameWon) {
-
-					String userEntry = input.nextLine();				
-
+					String userEntry = input.nextLine();
 					guessLetter = userEntry.toUpperCase().charAt(0);
+					checkGuess(toGuess, guessed);	
+					dead = checkDead(currentWord, input, dead, guessed, gameWon);
+					gameWon = checkWon(currentWord, input, dead, guessed, gameWon);
 
-					if (entries.contains("" + guessLetter)) {					
-						VisualControls.refreshWindow(livesLeft, guessed, true, guessLetter, letterFound, true);					
-					} else {
-						entries.add("" + guessLetter);
-
-						for (int i = 0; i < guessed.length; i++) {
-							if (guessLetter == toGuess[i]) {
-								guessed[i] = guessLetter;
-								letterFound = true;										
-							}			
-						}
-
-						if (!letterFound) {
-							livesLeft--;
-						}
-
-						VisualControls.refreshWindow(livesLeft, guessed, false, guessLetter, letterFound, true);
-					}				
-
-					int starsLeft = 0; 
-
-					if (livesLeft < 1) {					
-						dead = true;
-						VisualControls.printDeath(currentWord);						
-						
-						if (input.nextLine().trim().toLowerCase().equals("y")) {
-							dead = false;
-							break;
-						} else {
-							return;
-						}
-						
-					} else {
-						// count the stars
-						for (char c : guessed) {
-							if (c == '*') {
-								starsLeft++;
-							}
-						}
-
-						if (starsLeft == 0){
-							gameWon = true;
-							VisualControls.printVictory();							
-							
-							if (input.nextLine().trim().toLowerCase().equals("y")) {
-								gameWon = false;
-								break;
-							} else {
-								return;
-							}
-						}
+					if (dead || gameWon) {
+						break;
 					}
 
 					letterFound = false;
 				}
+				
+				String choice = input.nextLine().trim().toLowerCase();
+				if (choice.equals("y")) {
+					dead = false;
+					gameWon = false;
+					break;
+				} else {
+					playing = false;
+					break;
+				}
+			}
+		}	
+
+		VisualControls.endGame();
+		input.nextLine();
+	}
+
+	private static void checkGuess(char[] toGuess, char[] guessed) {
+		if (entries.contains("" + guessLetter)) {					
+			VisualControls.refreshWindow(livesLeft, guessed, true, guessLetter, letterFound, true);					
+		} else {
+			entries.add("" + guessLetter);
+			letterLookup(toGuess, guessed);
+
+			if (!letterFound) {
+				livesLeft--;
 			}
 
-			VisualControls.endGame();
-			input.nextLine();
-			break;
-		}		
+			VisualControls.refreshWindow(livesLeft, guessed, false, guessLetter, letterFound, true);
+		}
+	}
+
+	private static void letterLookup(char[] toGuess, char[] guessed) {
+		for (int i = 0; i < guessed.length; i++) {
+			if (guessLetter == toGuess[i]) {
+				guessed[i] = guessLetter;
+				letterFound = true;										
+			}			
+		}
+	}
+
+	private static void initializeGuessedWord(char[] guessed) {
+		for (int i = 0; i < guessed.length; i++) {
+			guessed[i] = '*';
+		}
+
+		livesLeft = 6;
+	}
+
+	private static String pickWord(Random wordSelector) {
+		int newWordIndex = wordSelector.nextInt(secretWords.size());
+		String currentWord = secretWords.get(newWordIndex);
+		secretWords.remove(newWordIndex);
+		return currentWord;
+	}
+
+	private static boolean checkDead(String currentWord, Scanner input, boolean dead, char[] guessed, boolean gameWon) {
+		if (livesLeft < 1) {	
+			VisualControls.printDeath(currentWord);						
+			return true;
+		} return false;
+	}
+
+	private static boolean checkWon(String currentWord, Scanner input, boolean dead, char[] guessed, boolean gameWon) {
+		// count the stars
+		int starsLeft = 0;
+		for (char c : guessed) {
+			if (c == '*') {
+				starsLeft++;
+			}
+		}
+
+		if (starsLeft == 0){
+
+			VisualControls.printVictory();							
+			return true;
+
+		} else {
+			return false;
+		}
 	}
 }
