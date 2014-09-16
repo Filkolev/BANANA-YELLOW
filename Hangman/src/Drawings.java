@@ -3,6 +3,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+// Holds larger elements to be printed on the console - gallows, smiley on victory and thank-you on exit
+// Only the VisualControls class accesses its methods
 public class Drawings {
 	
 	public static void PrintMan(int livesLeft){		

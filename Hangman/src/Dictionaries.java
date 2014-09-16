@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+// Holds all lists of words for the user to choose from
 public class Dictionaries {
 	
 	public static List<String> demo = new LinkedList<String>(Arrays.asList(
@@ -28,6 +29,7 @@ public class Dictionaries {
 	public static List<String> fruitsAndVegetables = new LinkedList<String>(Arrays.asList(
 			"BANNANA", "APPLE", "ORANGE", "ONION", "POTATO", "CABBAGE", "PEAR", "STRAWBERRY"));
 	
+	// A method that returns the selected list so a word can be picked out of it
 	public static List<String> selection(String select, List<String> secretWords){
 		switch (String.valueOf(select.toLowerCase())) {
 		case "demo":

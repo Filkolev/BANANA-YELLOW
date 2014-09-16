@@ -1,7 +1,9 @@
 import java.io.IOException;
 
+// Holds all methods that print text on the console
 public class VisualControls {
 	
+	// Shows on game start; clears console, prints rules and available categories
 	public static void initializeNewGame() {
 		VisualControls.clearConsole(); 
 		VisualControls.printRules();
@@ -23,6 +25,8 @@ public class VisualControls {
 				+ "3. Capitals\n4. Fruits and Vegitables\n");
 	}
 	
+	// Refreshes window after every letter entry - shows appropriate message for the outcome, 
+	// updates the number of lives left, updates the word on screen by revealing correctly guessed letters
 	public static void refreshWindow(Integer livesLeft, char[] guessed, boolean repeated, char guessLetter, boolean letterGuessed, boolean gameStarted) {
 		clearConsole();
 		Drawings.PrintMan(livesLeft);
@@ -65,6 +69,7 @@ public class VisualControls {
 		System.out.println();		
 	}
 	
+	// Prints a message when the user loses the game
 	public static void printDeath(String currentWord) {
 		clearConsole();
 		Drawings.PrintMan(0);
@@ -73,6 +78,7 @@ public class VisualControls {
 		newGamePrompt();
 	}
 	
+	// Smiley face shown when user guesses the word
 	public static void printVictory() {
 		clearConsole();
 		try {
@@ -85,6 +91,11 @@ public class VisualControls {
 		newGamePrompt();
 	}
 	
+	private static void newGamePrompt(){
+		System.out.print("Would you like to play again? (Y - yes; default - close game): ");
+	}	
+	
+	// Shows a thank-you when user exits the game
 	public static void endGame() {
 		clearConsole();
 
@@ -99,9 +110,5 @@ public class VisualControls {
 		System.out.println("\nIf you ran out of words you can purchase more words for the DISCOUNTED price of JUST $0.99! Call your local representative now!");
 		System.out.println();		
 		System.out.println("Press Enter to exit...");
-	}		
-	
-	private static void newGamePrompt(){
-		System.out.print("Would you like to play again? (Y - yes; default - close game): ");
-	}	
+	}			
 }
