@@ -16,6 +16,7 @@ Optional game features:
  (done) - console size set
  - BUG - game closes when user presses Enter without entering a letter.
  - check if selected category is empty, print message to tell the user to choose another.
+ - BUG - press any key to exit exits only on Enter.
 
  
 
