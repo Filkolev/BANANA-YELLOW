@@ -11,7 +11,12 @@ public class Dictionaries {
 	public static List<String> animals = new LinkedList<String>(Arrays.asList(
 			"ELEPHANT", "DOG", "CAT", "TIGER", "LION", "SNAKE", "PANDA", "BEAR", 
 			"RABBIT", "KOALA", "DUCK", "SNAIL", "LEOPARD", "ZEBRA", "KANGOROO", 
-			"FALCON", "EAGLE", "MOUSE", "HORSE"));		
+			"FALCON", "EAGLE", "MOUSE", "HORSE", "BAT", "ANT", "BEAVER", "BEE", 
+			"BUFFALO", "BULL", "CAMEL", "CHIMPANZEE", "CRAB", "COYOTE", "CROCODILE", 
+			"CRAB", "DEOVE", "DONKEY", "FOX", "FROG", "GOAT", "GOOSE", "GORILLA",
+			"PARROT", "PENGUIN", "RAT", "SCORPION", "SPIDER", "SQUIRREL", "SWAN", 
+			"WHALE", "WOLF", "PIGEON", "PIG", "PEACOCK", "OWL", "OCTOPUS", "MOOSE", 
+			"MOLE", "HIPPOPOTAMUS", "GRASSHOPPER", "GIRAFFE", "FLY"));
 	
 	public static List<String> capitals = new LinkedList<String>(Arrays.asList(
 			"SOFIA", "PARIS", "MADRID", "LONDON", "BELGRADE", "MOSKOW", "ATHENS"));		
