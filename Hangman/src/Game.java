@@ -42,7 +42,7 @@ public class Game {
 				while (!dead && !gameWon) {
 					String userEntry = input.nextLine();
 					while (userEntry.equals("")) {
-						System.out.print("\b");
+						VisualControls.refreshWindow(livesLeft, guessed, repeated, guessLetter, letterFound, false);
 						userEntry = input.nextLine();
 					}
 					guessLetter = userEntry.toUpperCase().charAt(0);
