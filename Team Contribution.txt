@@ -9,3 +9,9 @@ Stanimir Stoyanov
  - Debugging
  - Make post on blog
  - Edit presentation 
+
+ Martin Kurshumov
+ - Created presentation about the game and the team;
+ - Worked on Dictionaries, Drawing;
+ - Debugging;
+ 
