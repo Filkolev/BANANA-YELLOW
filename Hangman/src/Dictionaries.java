@@ -19,7 +19,11 @@ public class Dictionaries {
 			"MOLE", "HIPPOPOTAMUS", "GRASSHOPPER", "GIRAFFE", "FLY"));
 	
 	public static List<String> capitals = new LinkedList<String>(Arrays.asList(
-			"SOFIA", "PARIS", "MADRID", "LONDON", "BELGRADE", "MOSKOW", "ATHENS"));		
+			"SOFIA", "PARIS", "MADRID", "LONDON", "BELGRADE", "MOSKOW", "ATHENS",
+			"KABUL", "MINSK", "OTTAWA", "PRAGUE", "CAIRO", "DUBLIN", "TOKYO", "ROME", "MONACO",
+			"OSLO", "BRATISLAVA", "SINGAPORE", "BERN", "BANGKOK", "TAIPEI", "ANKARA", "WASHINGTON",
+			"BUCHAREST", "LISBON", "AMSTERDAM", "LUXEMBOURG", "SKOPJE", "TRIPOLI", "JERUSALEM", "COPENHAGEN",
+			"ZAGREB", "BEIJING", "VIENNA"));		
 	
 	public static List<String> fruitsAndVegetables = new LinkedList<String>(Arrays.asList(
 			"BANNANA", "APPLE", "ORANGE", "ONION", "POTATO", "CABBAGE", "PEAR", "STRAWBERRY"));
