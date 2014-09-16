@@ -68,7 +68,7 @@ public class VisualControls {
 		System.out.println("THANK YOU FOR PLAYING!");
 		System.out.println("\nIf you ran out of words you can purchase more words for the DISCOUNTED price of JUST $0.99! Call your local representative now!");
 		System.out.println();		
-		System.out.println("Press any key to exit...");
+		System.out.println("Press Enter to exit...");
 	}
 	
 	public static void printVictory() {
