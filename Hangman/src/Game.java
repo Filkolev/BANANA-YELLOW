@@ -26,11 +26,12 @@ public class Game {
 			}
 			
 			VisualControls.initializeNewGame();
-			String category = input.nextLine();
+			String category = input.nextLine();			
+			
 			secretWords = Dictionaries.selection(category, secretWords);
 			
 			while (secretWords.size() > 0) {	
-				String currentWord = pickWord(wordSelector);
+				String currentWord = pickWord(wordSelector).toUpperCase();
 				char[] toGuess = currentWord.toCharArray();
 				char[] guessed = new char[currentWord.length()];
 				
@@ -40,6 +41,10 @@ public class Game {
 
 				while (!dead && !gameWon) {
 					String userEntry = input.nextLine();
+					while (userEntry.equals("")) {
+						System.out.print("\b");
+						userEntry = input.nextLine();
+					}
 					guessLetter = userEntry.toUpperCase().charAt(0);
 					checkGuess(toGuess, guessed);	
 					dead = checkDead(currentWord, input, dead, guessed, gameWon);
