@@ -1,6 +1,6 @@
 Obligatory game features:
  - (done)Saving a go-to simplistic working version to use if we fail to implement GUI
- - Put comments to source code
+ - (done) Put comments to source code
  - (done) "Refactor" code if possible
  - (done) Create .exe file
 
@@ -25,7 +25,7 @@ Presentation materials:
  (done) - Each member should commit to the repository
  (done) - Make a simple pptx (perhaps add contributions there)
  - Add statistics to presentation - lines of code written, amount of time spent coding and debugging (3-4 hours of coding, 12+ hours of debugging)
- - Source code!!!
+ (done) - Source code!!!
 
 During presentation:
  - One member plays the game while another presents his part
