@@ -1,3 +1,11 @@
 Filip Kolev
  - Came up with basic game mechanics and ideas for implementation - use of lists, loops, Random selectors;
  - Uploaded repository to GitHub;
+
+Stanimir Stoyanov
+ - Write code
+ - Ideas for new features
+ - Drawing Hangman
+ - Debugging
+ - Make post on blog
+ - Edit presentation 
