@@ -30,6 +30,13 @@ public class Game {
 			
 			secretWords = Dictionaries.selection(category, secretWords);
 			
+			if (secretWords.size() == 0) {
+				VisualControls.initializeNewGame();
+				System.out.println("\nThe category you selected has no more words left. Please choose another!\n");
+				category = input.nextLine();	
+				secretWords = Dictionaries.selection(category, secretWords);
+			}
+			
 			while (secretWords.size() > 0) {	
 				String currentWord = pickWord(wordSelector).toUpperCase();
 				char[] toGuess = currentWord.toCharArray();
