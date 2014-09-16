@@ -20,13 +20,16 @@ public class Dictionaries {
 	
 	public static List<String> capitals = new LinkedList<String>(Arrays.asList(
 			"SOFIA", "PARIS", "MADRID", "LONDON", "BELGRADE", "MOSKOW", "ATHENS",
-			"KABUL", "MINSK", "OTTAWA", "PRAGUE", "CAIRO", "DUBLIN", "TOKYO", "ROME", "MONACO",
-			"OSLO", "BRATISLAVA", "SINGAPORE", "BERN", "BANGKOK", "TAIPEI", "ANKARA", "WASHINGTON",
-			"BUCHAREST", "LISBON", "AMSTERDAM", "LUXEMBOURG", "SKOPJE", "TRIPOLI", "JERUSALEM", "COPENHAGEN",
-			"ZAGREB", "BEIJING", "VIENNA"));		
+			"KABUL", "MINSK", "OTTAWA", "PRAGUE", "CAIRO", "DUBLIN", "TOKYO", "ROME", 
+			"MONACO", "OSLO", "BRATISLAVA", "SINGAPORE", "BERN", "BANGKOK", "TAIPEI", 
+			"ANKARA", "WASHINGTON", "BUCHAREST", "LISBON", "AMSTERDAM", "LUXEMBOURG", 
+			"SKOPJE", "TRIPOLI", "JERUSALEM", "COPENHAGEN", "ZAGREB", "BEIJING", "VIENNA"));		
 	
 	public static List<String> fruitsAndVegetables = new LinkedList<String>(Arrays.asList(
-			"BANNANA", "APPLE", "ORANGE", "ONION", "POTATO", "CABBAGE", "PEAR", "STRAWBERRY"));
+			"BANNANA", "APPLE", "ORANGE", "ONION", "POTATO", "CABBAGE", "PEAR", "STRAWBERRY", 
+			"APRICOT", "AUBERGINE", "AVOCADO", "BROCCOLI", "CARROT", "CHERRY", "GARLIC", 
+			"GRAPE", "MELON", "WATERMELON", "KIWI", "LEMON", "MANGO", "ORANGE", "PEA", "PEANUT", 
+			"PEPPER", "PINEAPPLE", "TOMATTO", "PLUM", "CUCUMBER"));
 	
 	public static List<String> selection(String select, List<String> secretWords){
 		switch (String.valueOf(select.toLowerCase())) {
