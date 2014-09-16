@@ -148,7 +148,7 @@ public class Game {
 		} return false;
 	}
 
-	// Checks for victory condition => no stats left means all letters have been revealed
+	// Checks for victory condition => no stars left means all letters have been revealed
 	private static boolean checkWon(String currentWord, Scanner input, boolean dead, char[] guessed, boolean gameWon) {
 		// count the stars
 		int starsLeft = 0;
