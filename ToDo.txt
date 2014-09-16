@@ -15,6 +15,7 @@ Optional game features:
  (done) - set console title (console dimensions cannot be controlled using Java);
  (done) - console size set
  - BUG - game closes when user presses Enter without entering a letter.
+ - check if selected category is empty, print message to tell the user to choose another.
 
  
 
