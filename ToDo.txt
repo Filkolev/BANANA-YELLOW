@@ -24,7 +24,7 @@ Presentation materials:
  (done) - Add each member's contribution in a text file
  (done) - Each member should commit to the repository
  (done) - Make a simple pptx (perhaps add contributions there)
- - Add statistics to presentation - lines of code written, amount of time spent coding and debugging (3-4 hours of coding, 12+ hours of debugging)
+ (done) - Add statistics to presentation - lines of code written, amount of time spent coding and debugging (3-4 hours of coding, 12+ hours of debugging)
  (done) - Source code!!!
 
 During presentation:
