@@ -1,6 +1,8 @@
 Filip Kolev
  - Came up with basic game mechanics and ideas for implementation - use of lists, loops, Random selectors;
  - Uploaded repository to GitHub;
+ - Code restructuring
+ - Debugging
 
 Stanimir Stoyanov
  - Write code
@@ -16,6 +18,5 @@ Stanimir Stoyanov
  - Debugging;
  
  Georgi Petrov
-
  - Code problems resolving;
  - New features implementation;
