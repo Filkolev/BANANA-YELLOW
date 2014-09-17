@@ -36,8 +36,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |         ***   ***");
-			System.out.println("|   |         ***   ***");
+			System.out.println("|   |          **   **");
+			System.out.println("|   |          **   **");
 			System.out.println("|   |           *****");
 			System.out.println("|   |");
 			System.out.println("|   |");
@@ -58,8 +58,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |         ***   ***");
-			System.out.println("|   |         ***   ***");
+			System.out.println("|   |          **   **");
+			System.out.println("|   |          **   **");
 			System.out.println("|   |           *****");
 			System.out.println("|   |            |||");
 			System.out.println("|   |            |||");
@@ -80,8 +80,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |         ***   ***");
-			System.out.println("|   |         ***   ***");
+			System.out.println("|   |          **   **");
+			System.out.println("|   |          **   **");
 			System.out.println("|   |           *****");
 			System.out.println("|   |          //|||");
 			System.out.println("|   |         // |||");
@@ -102,8 +102,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |         ***   ***");
-			System.out.println("|   |         ***   ***");
+			System.out.println("|   |          **   **");
+			System.out.println("|   |          **   **");
 			System.out.println("|   |           *****");
 			System.out.println("|   |          //|||\\\\");
 			System.out.println("|   |         // ||| \\\\");
@@ -124,8 +124,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |         ***   ***");
-			System.out.println("|   |         ***   ***");
+			System.out.println("|   |          **   **");
+			System.out.println("|   |          **   **");
 			System.out.println("|   |           *****");
 			System.out.println("|   |          //|||\\\\");
 			System.out.println("|   |         // ||| \\\\");
@@ -146,8 +146,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |         ***   ***");
-			System.out.println("|   |         ***   ***");
+			System.out.println("|   |          **   **");
+			System.out.println("|   |          **   **");
 			System.out.println("|   |           *****");
 			System.out.println("|   |          //|||\\\\");
 			System.out.println("|   |         // ||| \\\\");
