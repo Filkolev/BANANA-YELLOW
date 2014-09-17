@@ -27,7 +27,7 @@ public class VisualControls {
 	public static void printCategorySelection(){
 		System.out.print("\nReady? ");		
 		System.out.println("Choose a category (enter a number or the category name):\n1. Demo\n2. Animals\n"
-				+ "3. Capitals\n4. Fruits and Vegitables\n");
+				+ "3. Capitals\n4. Fruits and Vegetables\n");
 	}
 	
 	public static void printRules(){
