@@ -39,22 +39,22 @@ public class Dictionaries {
 		switch (String.valueOf(select.toLowerCase())) {
 		case "demo":
 		case "1": secretWords = demo;
-		selectedCateg = "demo";
+		selectedCateg = "DEMO";
 			break;
 		case "animals":
 		case "2": secretWords = animals;
-		selectedCateg = "animals";
+		selectedCateg = "ANIMALS";
 			break;
 		case "capitals":
 		case "3": secretWords = capitals;
-		selectedCateg = "capitals";
+		selectedCateg = "CAPITALS";
 			break;
 		case "fruitsAndVegetables":
 		case "4": secretWords = fruitsAndVegetables;
-		selectedCateg = "fruitsAndVegetables";
+		selectedCateg = "FRUITS AND VEGETABLES";
 			break;
 		default: secretWords = demo;
-		selectedCateg = "demo";
+		selectedCateg = "DEMO";
 			break;
 		}
 		return secretWords;
