@@ -1,5 +1,5 @@
 Obligatory game features:
- - (done)Saving a go-to simplistic working version to use if we fail to implement GUI
+ - (done) Saving a go-to simplistic working version to use if we fail to implement GUI
  - (done) Put comments to source code
  - (done) "Refactor" code if possible
  - (done) Create .exe file
@@ -28,7 +28,7 @@ Presentation materials:
  (done) - Source code!!!
 
 During presentation:
- - One member plays the game while another presents his part
- - Maybe choose 2 people to present - 10 minutes, 6 members (not enough time for all of us to present)
+ (done) - One member plays the game while another presents his part
+ (done) - Maybe choose 2 people to present - 10 minutes, 6 members (not enough time for all of us to present)
 
  

@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+// Holds all methods that print text or graphics on the console with few exceptions
 public class VisualControls {
 	
 	public static void refreshWindow(Integer livesLeft, char[] guessed, boolean repeated, char guessLetter, boolean letterGuessed, boolean gameStarted) {
@@ -27,7 +28,7 @@ public class VisualControls {
 	public static void printCategorySelection(){
 		System.out.print("\nReady? ");		
 		System.out.println("Choose a category (enter a number or the category name):\n1. Demo\n2. Animals\n"
-				+ "3. Capitals\n4. Fruits and Vegitables\n");
+				+ "3. Capitals\n4. Fruits and Vegetables\n");
 	}
 	
 	public static void printRules(){
@@ -97,7 +98,7 @@ public class VisualControls {
 	}
 	
 	private static void newGamePrompt(){
-		System.out.print("Would you like to play again? (Y - yes; default - close game): ");
+		System.out.print("Would you like to play again? (Y - yes; N - close game): ");
 	}
 	
 	public static void initializeNewGame() throws IOException {

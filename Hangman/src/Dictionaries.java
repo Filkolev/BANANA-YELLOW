@@ -35,28 +35,28 @@ public class Dictionaries {
 			"PEPPER", "PINEAPPLE", "TOMATTO", "PLUM", "CUCUMBER"));
 	
 	// A method that returns the selected list so a word can be picked out of it
-	public static List<String> selection(String select, List<String> secretWords){
-		switch (String.valueOf(select.toLowerCase())) {
-		case "demo":
-		case "1": secretWords = demo;
-		selectedCateg = "DEMO";
-			break;
-		case "animals":
-		case "2": secretWords = animals;
-		selectedCateg = "ANIMALS";
-			break;
-		case "capitals":
-		case "3": secretWords = capitals;
-		selectedCateg = "CAPITALS";
-			break;
-		case "fruitsAndVegetables":
-		case "4": secretWords = fruitsAndVegetables;
-		selectedCateg = "FRUITS AND VEGETABLES";
-			break;
-		default: secretWords = demo;
-		selectedCateg = "DEMO";
-			break;
-		}
-		return secretWords;
-	}	
+		public static List<String> selection(String select, List<String> secretWords){
+	        String s = String.valueOf(select.toLowerCase());
+	        if (s.equals("demo") || s.equals("1")) {
+	            secretWords = demo;
+	            selectedCateg = "DEMO";
+	            Game.validCategory = true;
+	        } else if (s.equals("animals") || s.equals("2")) {
+	            secretWords = animals;
+	            selectedCateg = "ANIMALS";
+	            Game.validCategory = true;
+	        } else if (s.equals("capitals") || s.equals("3")) {
+	            secretWords = capitals;
+	            selectedCateg = "CAPITALS";
+	            Game.validCategory = true;
+	        } else if (s.equals("fruits and vegetables") || s.equals("4")){
+	            secretWords = fruitsAndVegetables;
+	            selectedCateg = "FRUITS AND VEGETABLES";
+	            Game.validCategory = true;
+	        }
+	        else {
+	            Game.validCategory = false;
+	        }
+			return secretWords;
+		}	
 }

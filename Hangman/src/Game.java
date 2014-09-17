@@ -13,6 +13,7 @@ public class Game {
 	public static LinkedHashSet<String> entries = new LinkedHashSet<String>();
 	private static List<String> secretWords;
 	private static boolean playing;
+    public static boolean validCategory = true;
 
 	public static void main(String[] args) throws IOException {		
 		Scanner input = new Scanner(System.in);
@@ -29,10 +30,17 @@ public class Game {
 			
 			// Initial window showing rules of play and available categories
 			VisualControls.initializeNewGame();
-			String category = input.nextLine();			
-			
-			// Retrieve list of words in the selected categories
-			secretWords = Dictionaries.selection(category, secretWords);
+			String category = input.nextLine();
+            // Retrieve list of words in the selected categories
+            secretWords = Dictionaries.selection(category, secretWords);
+
+            
+            // Retrieve list of words in the selected categories again if validCategory is not true
+            while (!validCategory) {
+                System.out.println("Wrong input, try again!");
+                category = input.nextLine();
+                secretWords = Dictionaries.selection(category, secretWords);
+            }
 			
 			// check if the category is empty, prompt user to choose another
 			if (secretWords.size() == 0) {
@@ -82,6 +90,10 @@ public class Game {
 				
 				// When current game ends prompt for a new game
 				String choice = input.nextLine().trim().toLowerCase();
+					while (!choice.equals("y") && !choice.equals("n")) {
+                    System.out.println("Invalid input. Enter your choice again.");
+                    choice = input.nextLine().trim().toLowerCase();
+					}
 				if (choice.equals("y")) {
 					dead = false;
 					gameWon = false;
@@ -90,6 +102,7 @@ public class Game {
 					playing = false;
 					break;
 				}
+				
 			}
 		}	
 
