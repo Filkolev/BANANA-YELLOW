@@ -26,4 +26,8 @@ Stanimir Stoyanov
  - Created .exe file and modified it;
  - Added the "choose category" option;
  - Worked on Dictionaries
+ 
+ Atanas Atanasov
+ - Debugging;
+ - Worked on I/O control
 
