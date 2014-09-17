@@ -3,8 +3,10 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+
 // Holds all lists of words for the user to choose from
 public class Dictionaries {
+	public static String selectedCateg;
 	
 	public static List<String> demo = new LinkedList<String>(Arrays.asList(
 			"PURIFICATION", "SUBROUTINE", "ELEPHANT", "EPITOME"));		
@@ -36,21 +38,25 @@ public class Dictionaries {
 	public static List<String> selection(String select, List<String> secretWords){
 		switch (String.valueOf(select.toLowerCase())) {
 		case "demo":
-		case "1": secretWords = demo;		
+		case "1": secretWords = demo;
+		selectedCateg = "demo";
 			break;
 		case "animals":
-		case "2": secretWords = animals;	
+		case "2": secretWords = animals;
+		selectedCateg = "animals";
 			break;
 		case "capitals":
-		case "3": secretWords = capitals;	
+		case "3": secretWords = capitals;
+		selectedCateg = "capitals";
 			break;
 		case "fruitsAndVegetables":
-		case "4": secretWords = fruitsAndVegetables;	
+		case "4": secretWords = fruitsAndVegetables;
+		selectedCateg = "fruitsAndVegetables";
 			break;
 		default: secretWords = demo;
+		selectedCateg = "demo";
 			break;
 		}
 		return secretWords;
 	}	
 }
-
