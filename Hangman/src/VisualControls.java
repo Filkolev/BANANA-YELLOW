@@ -1,5 +1,6 @@
 import java.io.IOException;
 
+// Holds all methods that print text or graphics on the console with few exceptions
 public class VisualControls {
 	
 	public static void refreshWindow(Integer livesLeft, char[] guessed, boolean repeated, char guessLetter, boolean letterGuessed, boolean gameStarted) {
