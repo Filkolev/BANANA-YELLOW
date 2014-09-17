@@ -100,8 +100,9 @@ public class VisualControls {
 		System.out.print("Would you like to play again? (Y - yes; default - close game): ");
 	}
 	
-	public static void initializeNewGame() {
-		VisualControls.clearConsole(); 
+	public static void initializeNewGame() throws IOException {
+		VisualControls.clearConsole();
+		Drawings.printHangman();
 		VisualControls.printRules();
 		VisualControls.printCategorySelection();		
 	}
