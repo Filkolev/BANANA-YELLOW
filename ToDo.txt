@@ -15,7 +15,7 @@ Optional game features:
  (done) - set console title (console dimensions cannot be controlled using Java);
  (done) - console size set
  (fixed) - BUG - game closes when user presses Enter without entering a letter.
- (almost fixed) - check if selected category is empty, print message to tell the user to choose another.
+ (fixed) - check if selected category is empty, print message to tell the user to choose another.
  (fixed) - BUG - press any key to exit exits only on Enter. Text changed to "Press Enter to exit".
 
  
