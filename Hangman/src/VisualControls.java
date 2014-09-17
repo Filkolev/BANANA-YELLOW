@@ -1,13 +1,34 @@
 import java.io.IOException;
+import java.util.Locale.Category;
 
-// Holds all methods that print text on the console
 public class VisualControls {
 	
-	// Shows on game start; clears console, prints rules and available categories
-	public static void initializeNewGame() {
-		VisualControls.clearConsole(); 
-		VisualControls.printRules();
-		VisualControls.printCategorySelection();		
+	public static void refreshWindow(Integer livesLeft, char[] guessed, boolean repeated, char guessLetter, boolean letterGuessed, boolean gameStarted) {
+		clearConsole();
+		Drawings.PrintMan(livesLeft);
+		if (gameStarted) {
+			guessOutcome(letterGuessed, repeated);
+		} else {
+			System.out.println();
+		}
+			
+		System.out.println("Entries" + Game.entries);
+		System.out.println("Selected Category: " + Dictionaries.selectedCateg);
+		System.out.println("Lives left: " + livesLeft + "!");
+		printGuessWord(guessed);
+		System.out.print("Your guess: ");
+	}
+
+	public static void clearConsole() {
+		for(int clear = 0; clear < 150; clear++){
+			System.out.println("\b") ;
+		}
+	}
+	
+	public static void printCategorySelection(){
+		System.out.print("\nReady? ");		
+		System.out.println("Choose a category (enter a number or the category name):\n1. Demo\n2. Animals\n"
+				+ "3. Capitals\n4. Fruits and Vegitables\n");
 	}
 	
 	public static void printRules(){
@@ -19,35 +40,6 @@ public class VisualControls {
 		System.out.println();
 	}
 	
-	public static void printCategorySelection(){
-		System.out.print("\nReady? ");		
-		System.out.println("Choose a category (enter a number or the category name):\n1. Demo\n2. Animals\n"
-				+ "3. Capitals\n4. Fruits and Vegitables\n");
-	}
-	
-	// Refreshes window after every letter entry - shows appropriate message for the outcome, 
-	// updates the number of lives left, updates the word on screen by revealing correctly guessed letters
-	public static void refreshWindow(Integer livesLeft, char[] guessed, boolean repeated, char guessLetter, boolean letterGuessed, boolean gameStarted) {
-		clearConsole();
-		Drawings.PrintMan(livesLeft);
-		if (gameStarted) {
-			guessOutcome(letterGuessed, repeated);
-		} else {
-			System.out.println();
-		}
-			
-		System.out.println("Entries" + Game.entries);
-		System.out.println("Lives left: " + livesLeft + "!");
-		printGuessWord(guessed);
-		System.out.print("Your guess: ");
-	}
-
-	public static void clearConsole() {
-		for(int clear = 0; clear < 150; clear++){
-			System.out.println("\b") ;
-		}
-	}	
-	
 	private static void printGuessWord(char[] guessed){
 		System.out.println();
 		System.out.println();
@@ -55,6 +47,42 @@ public class VisualControls {
 			System.out.printf("%s ", c);
 		}
 		System.out.println();
+	}
+	
+	public static void printDeath(String currentWord) {
+		clearConsole();
+		Drawings.PrintMan(0);
+		System.out.println("Sometimes win, sometimes lyun!");
+		System.out.println("The word was: " + currentWord);	
+		newGamePrompt();
+	}
+	
+	public static void endGame() {
+		clearConsole();
+
+		try {
+			Drawings.printThankYou();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		System.out.println("THANK YOU FOR PLAYING!");
+		System.out.println("\nIf you ran out of words you can purchase more words for the DISCOUNTED price of JUST $0.99! Call your local representative now!");
+		System.out.println();		
+		System.out.println("Press any key to exit...");
+	}
+	
+	public static void printVictory() {
+		clearConsole();
+		try {
+			Drawings.printSmiley();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("YOU GUESSED THE WORD !!!");	
+		newGamePrompt();
 	}
 	
 	private static void guessOutcome(boolean letterGuessed, boolean repeated) {		
@@ -69,46 +97,13 @@ public class VisualControls {
 		System.out.println();		
 	}
 	
-	// Prints a message when the user loses the game
-	public static void printDeath(String currentWord) {
-		clearConsole();
-		Drawings.PrintMan(0);
-		System.out.println("Sometimes win, sometimes lyun!");
-		System.out.println("The word was: " + currentWord);	
-		newGamePrompt();
-	}
-	
-	// Smiley face shown when user guesses the word
-	public static void printVictory() {
-		clearConsole();
-		try {
-			Drawings.printSmiley();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("YOU GUESSED THE WORD !!!");	
-		newGamePrompt();
-	}
-	
 	private static void newGamePrompt(){
 		System.out.print("Would you like to play again? (Y - yes; default - close game): ");
-	}	
+	}
 	
-	// Shows a thank-you when user exits the game
-	public static void endGame() {
-		clearConsole();
-
-		try {
-			Drawings.printThankYou();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		System.out.println("THANK YOU FOR PLAYING!");
-		System.out.println("\nIf you ran out of words you can purchase more words for the DISCOUNTED price of JUST $0.99! Call your local representative now!");
-		System.out.println();		
-		System.out.println("Press Enter to exit...");
-	}			
+	public static void initializeNewGame() {
+		VisualControls.clearConsole(); 
+		VisualControls.printRules();
+		VisualControls.printCategorySelection();		
+	}
 }
