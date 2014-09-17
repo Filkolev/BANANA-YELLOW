@@ -15,3 +15,7 @@ Stanimir Stoyanov
  - Worked on Dictionaries, Drawing;
  - Debugging;
  
+ Georgi Petrov
+
+ - Code problems resolving;
+ - New features implementation;
