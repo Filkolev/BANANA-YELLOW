@@ -36,8 +36,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |          **   **");
-			System.out.println("|   |          **   **");
+			System.out.println("|   |         ***   ***");
+			System.out.println("|   |         ***   ***");
 			System.out.println("|   |           *****");
 			System.out.println("|   |");
 			System.out.println("|   |");
@@ -58,8 +58,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |          **   **");
-			System.out.println("|   |          **   **");
+			System.out.println("|   |         ***   ***");
+			System.out.println("|   |         ***   ***");
 			System.out.println("|   |           *****");
 			System.out.println("|   |            |||");
 			System.out.println("|   |            |||");
@@ -80,8 +80,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |          **   **");
-			System.out.println("|   |          **   **");
+			System.out.println("|   |         ***   ***");
+			System.out.println("|   |         ***   ***");
 			System.out.println("|   |           *****");
 			System.out.println("|   |          //|||");
 			System.out.println("|   |         // |||");
@@ -102,8 +102,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |          **   **");
-			System.out.println("|   |          **   **");
+			System.out.println("|   |         ***   ***");
+			System.out.println("|   |         ***   ***");
 			System.out.println("|   |           *****");
 			System.out.println("|   |          //|||\\\\");
 			System.out.println("|   |         // ||| \\\\");
@@ -124,8 +124,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |          **   **");
-			System.out.println("|   |          **   **");
+			System.out.println("|   |         ***   ***");
+			System.out.println("|   |         ***   ***");
 			System.out.println("|   |           *****");
 			System.out.println("|   |          //|||\\\\");
 			System.out.println("|   |         // ||| \\\\");
@@ -146,8 +146,8 @@ public class Drawings {
 			System.out.println("|   |             |");
 			System.out.println("|   |             |");
 			System.out.println("|   |           *****");
-			System.out.println("|   |          **   **");
-			System.out.println("|   |          **   **");
+			System.out.println("|   |         ***   ***");
+			System.out.println("|   |         ***   ***");
 			System.out.println("|   |           *****");
 			System.out.println("|   |          //|||\\\\");
 			System.out.println("|   |         // ||| \\\\");
@@ -182,7 +182,7 @@ public class Drawings {
 			reader.close();
 			
 		} catch (FileNotFoundException e) {
-			
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -204,7 +204,29 @@ public class Drawings {
 			reader.close();
 			
 		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void printHangman() throws IOException {
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader("Hangman.txt"));
+			String line = reader.readLine();
 			
+			while (line != null) {
+				System.out.println(line);
+				line = reader.readLine();
+			}
+			
+			System.out.println();
+			System.out.println();
+			System.out.println();
+			
+			reader.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
