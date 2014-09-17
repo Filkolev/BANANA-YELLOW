@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Random;
@@ -13,7 +14,7 @@ public class Game {
 	private static List<String> secretWords;
 	private static boolean playing;
 
-	public static void main(String[] args) {		
+	public static void main(String[] args) throws IOException {		
 		Scanner input = new Scanner(System.in);
 		Random wordSelector = new Random();
 		playing = true;
