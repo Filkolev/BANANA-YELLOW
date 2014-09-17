@@ -20,3 +20,10 @@ Stanimir Stoyanov
  Georgi Petrov
  - Code problems resolving;
  - New features implementation;
+
+ Alexander Marinov
+ - Created PrintHanging class and SecretWords class  (later renamed to Drawing and Dictionries and modified by the team);
+ - Created .exe file and modified it;
+ - Added the "choose category" option;
+ - Worked on Dictionaries
+
